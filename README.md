@@ -46,6 +46,26 @@ Unity 직렬화 파일(`.meta`, `.unity`, `.prefab`, `.asset` 등)과 lock 파�
 
 Codex 실행이 실패하면(모델 미지원, 로그인 만료 등) 작업을 막지 않고 `review.log`에 `실패`로 기록합니다.
 
+## 이미지 생성
+
+Codex CLI의 이미지 생성 기능으로 GPT에게 이미지를 만들게 할 수 있습니다. Codex 로그인만 있으면 되고 API 키는 필요 없습니다.
+
+```
+/codex-auto-review:image 로우폴리 스타일 폭탄 아이콘, 흰 배경
+/codex-auto-review:image 이 캐릭터를 겨울옷 입은 버전으로 Assets/Art/hero.png
+```
+
+Claude가 프롬프트를 다듬고 저장 경로를 정한 뒤(Unity 프로젝트면 `Assets/Art/Generated/`) 결과 이미지를 열어 확인합니다.
+참고 이미지 경로를 주면 그 이미지를 참고하거나 편집합니다. 한 장에 1분 정도 걸립니다.
+
+스크립트를 직접 쓸 수도 있습니다:
+
+```
+bash scripts/codex-image.sh -o out.png [-i 참고.png] "프롬프트"
+```
+
+`CODEX_IMAGE_MODEL`로 Codex 모델을 바꿀 수 있습니다(기본은 Codex 설정의 모델).
+
 ## 동작 방식
 
 1. Claude가 응답을 마치면 Stop 훅이 실행됩니다.

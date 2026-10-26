@@ -1,7 +1,7 @@
 {
   "name": "codex-auto-review",
-  "version": "1.0.0",
-  "description": "Claude가 응답을 마칠 때마다 커밋되지 않은 변경을 OpenAI Codex CLI가 자동 리뷰하고, 지적 사항을 Claude에게 돌려보내 수정하게 하는 Stop 훅",
+  "version": "1.1.0",
+  "description": "Claude가 응답을 마칠 때마다 커밋되지 않은 변경을 OpenAI Codex CLI가 자동 리뷰하고, 지적 사항을 Claude에게 돌려보내 수정하게 하는 Stop 훅, 그리고 Codex로 이미지를 생성하는 명령",
   "author": { "name": "myth0629" },
   "license": "MIT",
   "keywords": ["codex", "code-review", "hooks"]
