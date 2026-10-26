@@ -1,0 +1,12 @@
+{
+  "name": "codex-auto-review",
+  "owner": { "name": "myth0629" },
+  "metadata": { "description": "Claude Code 작업을 OpenAI Codex CLI가 자동 리뷰하는 플러그인" },
+  "plugins": [
+    {
+      "name": "codex-auto-review",
+      "source": "./",
+      "description": "Claude 작업 후 Codex CLI가 자동으로 코드 리뷰하는 Stop 훅"
+    }
+  ]
+}
